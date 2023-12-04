@@ -5,6 +5,46 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 First, run the development server:
 
 ```bash
+after cloning:
+npm install or npm i
+
+create seperate file for .env and .env.local in your working directory
+
+for env:
+
+note:I used MongoDB here because i'm not familiar yet in PostgreSQL
+
+go to https://account.mongodb.com/account/login
+
+create Database with a collection name "Task"
+
+paste your created URL from mongoDB in your .env file example below:
+
+DATABASE_URL= ************************************
+
+for .env.local:
+
+go to https://clerk.com/
+
+note: Clerk is more than a "sign-in box." Integrate complete user management UIs and APIs, purpose-built for React, Next.js, and the Modern Web.
+
+create user authentication with google and github.
+
+copy API Keys example below:
+
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_*************************************
+CLERK_SECRET_KEY=sk_test_**************************************
+
+copy and paste it in .env.local
+
+below API keys, paste also this one below:
+
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/signin
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/signup
+NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/
+NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/
+NEXT_PUBLIC_CLERK_AFTER_SIGN_OUT_URL=/signin
+
 npm run dev
 # or
 yarn dev
@@ -16,7 +56,7 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
