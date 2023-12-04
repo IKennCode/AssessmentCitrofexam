@@ -57,12 +57,12 @@ function CreateContent() {
       }
 
       if (!res.data.error) {
-        toast.success("Task created successfully.");
+        toast.success("Congratulations! Your task created successfully.");
         allTasks();
         closeModal();
       }
     } catch (error) {
-      toast.error("Something went wrong.");
+      toast.error("Something went wrong please try again.");
       console.log(error);
     }
   };
@@ -71,14 +71,14 @@ function CreateContent() {
     <CreateContentStyled onSubmit={handleSubmit} theme={theme}>
       <h1>Create a Task</h1>
       <div className="input-control">
-        <label htmlFor="title">Title</label>
+        <label htmlFor="title">What's on Your Mind?</label>
         <input
           type="text"
           id="title"
           value={title}
           name="title"
           onChange={handleChange("title")}
-          placeholder="e.g, Watch a video from Fireship."
+          placeholder="ex. Creat Citrof Coding Test"
         />
       </div>
       <div className="input-control">
@@ -89,7 +89,8 @@ function CreateContent() {
           name="description"
           id="description"
           rows={4}
-          placeholder="e.g, Watch a video about Next.js Auth"
+          placeholder="e.g, web application for Nextjs Task Manager app"
+          
         ></textarea>
       </div>
       <div className="input-control">
