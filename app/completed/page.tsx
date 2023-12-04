@@ -1,3 +1,5 @@
+//The purpose of this page is to display a list of completed tasks.
+
 "use client";
 import React from "react";
 import { useGlobalState } from "../context/globalProvider";
