@@ -14,7 +14,7 @@ const nunito = Nunito({
 });
 
 export const metadata: Metadata = {
-  title: "Tasko",
+  title: "Tasko App",
   description: "Task Manager App",
 };
 

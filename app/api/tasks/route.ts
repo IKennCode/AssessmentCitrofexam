@@ -18,18 +18,20 @@ export async function POST(req: Request) {
     // Validation checks for required fields
     if (!title || !description || !date) {
       return NextResponse.json({
-        error: "Missing required fields",
+        error: "Missing some required fields, check again!",
         status: 400,
       });
     }
 
+    // Validation check for minimum title length
     if (title.length < 3) {
       return NextResponse.json({
-        error: "Title must be at least 3 characters long",
+        error: "Oops! Title must be at least 3 or 4 characters long",
         status: 400,
       });
     }
-
+ 
+   // Creating a new task using Prisma
     const task = await prisma.task.create({
       data: {
         title,
@@ -43,7 +45,7 @@ export async function POST(req: Request) {
 
     return NextResponse.json(task);
   } catch (error) {
-    console.log("ERROR CREATING TASK: ", error);
+    console.log("An Error occur CREATING TASK: ", error);
     return NextResponse.json({ error: "Error creating task", status: 500 });
   }
 }
