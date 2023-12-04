@@ -1,3 +1,6 @@
+//API routes, each handling a different HTTP method: POST, GET, and PUT. 
+//They are designed to perform CRUD (Create, Read, Update, Delete) operations on tasks.
+
 import prisma from "@/app/utils/connect";
 import { auth } from "@clerk/nextjs";
 import { NextResponse } from "next/server";
@@ -12,6 +15,7 @@ export async function POST(req: Request) {
 
     const { title, description, date, completed, important } = await req.json();
 
+    // Validation checks for required fields
     if (!title || !description || !date) {
       return NextResponse.json({
         error: "Missing required fields",
