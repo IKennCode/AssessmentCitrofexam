@@ -1,3 +1,7 @@
+// this Next.js API route handles DELETE requests to delete a task from the database, 
+//checking for user authentication and providing appropriate responses based on the authentication status and the success or 
+//failure of the delete operation.
+
 import prisma from "@/app/utils/connect";
 import { auth } from "@clerk/nextjs";
 import { NextResponse } from "next/server";
