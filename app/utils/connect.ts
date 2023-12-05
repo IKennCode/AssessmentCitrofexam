@@ -1,3 +1,6 @@
+//PrismaClient is created during the lifetime of the application, preventing potential memory leaks. 
+//It checks the environment and uses a global variable to reuse the same instance if the application is not in a production environment.
+
 import { PrismaClient } from "@prisma/client";
 
 let prisma: PrismaClient;
