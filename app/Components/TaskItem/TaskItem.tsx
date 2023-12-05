@@ -94,7 +94,7 @@ const TaskItemStyled = styled.div`
       border: none;
       outline: none;
       cursor: pointer;
-
+   
       i {
         font-size: 1.4rem;
         color: ${(props) => props.theme.colorGrey2};
@@ -109,8 +109,9 @@ const TaskItemStyled = styled.div`
     .incomplete {
       display: inline-block;
       padding: 0.4rem 1rem;
-      background: ${(props) => props.theme.colorDanger};
+      background: ${(props) => props.theme.colorPrimary};
       border-radius: 30px;
+      
     }
 
     .completed {
