@@ -1,3 +1,4 @@
+//buttons for sign out and create task
 "use client";
 import { useGlobalState } from "@/app/context/globalProvider";
 
@@ -58,7 +59,7 @@ const ButtonStyled = styled.button`
   position: relative;
   display: flex;
   align-items: center;
-  color: ${(props) => props.theme.colorGrey2};
+  color: ${(props) => props.theme.colorPrimary};
   z-index: 5;
   cursor: pointer;
 
@@ -66,7 +67,7 @@ const ButtonStyled = styled.button`
 
   i {
     margin-right: 1rem;
-    color: ${(props) => props.theme.colorGrey2};
+    color: ${(props) => props.theme.colorPrimary};
     font-size: 1.5rem;
     transition: all 0.55s ease-in-out;
   }

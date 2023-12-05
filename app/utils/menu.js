@@ -1,5 +1,8 @@
+// Importing icons from external sources like Icons.js
 import { list, check, todo, home } from "./Icons";
 
+
+// Defining an array representing a menu
 const menu = [
   {
     id: 1,
@@ -27,4 +30,8 @@ const menu = [
   },
 ];
 
+// Exporting the menu array
 export default menu;
+
+//This structure allows you to easily manage your menu items in one place. If you need to update the menu or add/remove items,
+// you can do so in this module without having to modify every component that uses the menu.
