@@ -103,7 +103,7 @@ function CreateContent() {
           id="date"
         />
       </div>
-      <div className="input-control toggler">
+      {/* <div className="input-control toggler">
         <label htmlFor="completed">Toggle Completed</label>
         <input
           value={completed.toString()}
@@ -112,7 +112,7 @@ function CreateContent() {
           name="completed"
           id="completed"
         />
-      </div>
+      </div> */}
       <div className="input-control toggler">
         <label htmlFor="important">Toggle Important</label>
         <input

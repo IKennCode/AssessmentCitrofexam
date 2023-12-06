@@ -37,10 +37,12 @@ export default function RootLayout({
             referrerPolicy="no-referrer"
           />
         </head>
+
+        
         <body className={nunito.className}>
           <NextTopLoader
             height={2}
-            color="colorPrimary"
+            color="#7263F3"
             easing="cubic-bezier(0.53,0.21,0,1)"
           />
           <ContextProvider>
